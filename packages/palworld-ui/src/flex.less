@@ -1,0 +1,15 @@
+.flex(@direction: row, @justify: start, @align: start, @gap: 0px) {
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @justify;
+  align-items: @align;
+  gap: @gap;
+}
+
+.flex-row(@justify: start, @align: start, @gap: 0px) {
+  .flex(row, @justify, @align, @gap);
+}
+
+.flex-column(@justify: start, @align: start, @gap: 0px) {
+  .flex(column, @justify, @align, @gap);
+}

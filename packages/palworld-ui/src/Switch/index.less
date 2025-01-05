@@ -1,0 +1,33 @@
+@import "../flex.less";
+
+.pwui-switch {
+  .flex-row(start, center, 4px);
+
+  padding-left: 48px;
+  height: 36px;
+
+  &-button {
+    appearance: none;
+    -webkit-appearance: none;
+    background: unset;
+    border: unset;
+    cursor: pointer;
+    height: 100%;
+    flex: 1;
+
+    padding-top: 2px;
+
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: gray;
+
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+
+    &.active {
+      background-color: rgba(0, 0, 255, 0.5);
+      border-bottom-color: blue;
+    }
+  }
+}

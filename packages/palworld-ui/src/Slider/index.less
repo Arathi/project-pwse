@@ -1,0 +1,44 @@
+@import "../flex.less";
+
+.pwse-slider {
+  .flex-row(start, center, 0px);
+
+  .pwse-slider-value {
+    .flex-row(start, center, 0px);
+    width: 48px;
+    color: white;
+  }
+
+  .pwse-slider-range {
+    .flex-column(center, unset, 0px);
+    flex: 1;
+
+    input[type='range'] {
+      appearance: none;
+      -webkit-appearance: none;
+
+      height: 4px;
+      background-color: gray;
+      background-image: linear-gradient(
+        to bottom,
+        white,
+        white
+      );
+      background-repeat: no-repeat;
+      background-size: 0%;
+
+      &::-webkit-slider-thumb {
+        appearance: none;
+        -webkit-appearance: none;
+
+        width: 16px;
+        height: 16px;
+        background-color: gray;
+        border-style: solid;
+        border-width: 4px;
+        border-color: white;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

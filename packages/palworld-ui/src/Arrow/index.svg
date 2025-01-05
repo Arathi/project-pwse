@@ -1,0 +1,6 @@
+<svg viewBox="-16 -12 16 24">
+  <g fill="white" transform="rotate(135)">
+    <rect x="0" y="0" width="4" height="16" />
+    <rect x="0" y="0" width="16" height="4" />
+  </g>
+</svg>
