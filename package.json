@@ -1,9 +1,7 @@
 {
-  "name": "@pwse/monorepo",
-  "version": "0.25.0104",
-  "keywords": [
-    "palworld"
-  ],
-  "author": "Arathi",
-  "license": "MIT"
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }

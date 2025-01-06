@@ -7,13 +7,13 @@ type Props = {
 
 const Button: React.FC<Props> = ({ children, onClick = () => {} }) => {
   return (
-    <button className="pwse-button" type="button" onClick={() => onClick()}>
-      <div className="pwse-button-background" />
-      <div className="pwse-button-content">{children}</div>
-      <div className="pwse-button-vertex top left" />
-      <div className="pwse-button-vertex top right" />
-      <div className="pwse-button-vertex bottom left" />
-      <div className="pwse-button-vertex bottom right" />
+    <button className="pwui-button" type="button" onClick={() => onClick()}>
+      <div className="pwui-button-background" />
+      <div className="pwui-button-content">{children}</div>
+      <div className="pwui-button-vertex top left" />
+      <div className="pwui-button-vertex top right" />
+      <div className="pwui-button-vertex bottom left" />
+      <div className="pwui-button-vertex bottom right" />
     </button>
   );
 };

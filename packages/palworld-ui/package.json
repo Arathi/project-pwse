@@ -1,6 +1,6 @@
 {
   "name": "@pwse/palworld-ui",
-  "version": "0.25.0104",
+  "version": "0.25.104",
   "type": "module",
   "exports": {
     ".": {
@@ -49,8 +49,7 @@
     "vitest": "^2.1.8"
   },
   "peerDependencies": {
-    "react": ">=16.9.0",
-    "react-dom": ">=16.9.0"
-  },
-  "private": true
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
 }
