@@ -1,0 +1,88 @@
+@import "../flex.less";
+
+.pwse-button {
+  // 公共
+  --pwse-button-width: 216px;
+  --pwse-button-height: 36px;
+  --pwse-button-background-color: rgba(128, 128, 128, 1);
+  --pwse-button-background-color-hover: rgba(160, 160, 160, 1);
+
+  // 边框
+  --pwse-button-border-width: 1px;
+  --pwse-button-border-color: rgba(192, 192, 192, 1);
+
+  // 内容
+  --pwse-button-content-color: white;
+  
+  // 顶点
+  --pwse-button-vertex-size: 3px;
+  --pwse-button-vertex-color: white;
+  
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+
+  position: relative;
+  width: var(--pwse-button-width);
+  height: var(--pwse-button-height);
+  cursor: pointer;
+  
+  &:hover {
+    --pwse-button-background-color: var(--pwse-button-background-color-hover);
+  }
+
+  &-background {
+    background-color: var(--pwse-button-background-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(
+      var(--pwse-button-width) -
+      var(--pwse-button-border-width) * 2
+    );
+    height: calc(
+      var(--pwse-button-height) -
+      var(--pwse-button-border-width) * 2
+    );
+    border-style: solid;
+    border-width: var(--pwse-button-border-width);
+    border-color: var(--pwse-button-border-color);
+  }
+
+  &-content {
+    .flex-row(center, center, 0);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--pwse-button-width);
+    height: var(--pwse-button-height);
+    color: var(--pwse-button-content-color);
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+
+  &-vertex {
+    position: absolute;
+    width: var(--pwse-button-vertex-size);
+    height: var(--pwse-button-vertex-size);
+    background-color: var(--pwse-button-vertex-color);
+
+    &.top {
+      top: 0;
+    }
+
+    &.right {
+      right: 0;
+    }
+
+    &.bottom {
+      bottom: 0;
+    }
+
+    &.left {
+      left: 0;
+    }
+  }
+}
