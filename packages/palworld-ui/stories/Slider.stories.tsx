@@ -5,6 +5,26 @@ import Slider from "../src/Slider";
 const meta = {
   title: "Slider",
   component: Slider,
+  argTypes: {
+    className: {
+      control: "text",
+    },
+    value: {
+      control: "number",
+    },
+    min: {
+      control: "number",
+    },
+    max: {
+      control: "number",
+    },
+    step: {
+      control: "number",
+    },
+    defaultValue: {
+      control: "number",
+    },
+  },
 } satisfies Meta<typeof Slider>;
 
 export default meta;

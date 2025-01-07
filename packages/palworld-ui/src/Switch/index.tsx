@@ -41,14 +41,14 @@ const Switch: React.FC<Props> = ({
       <button
         type="button"
         className={`pwui-switch-button ${offActive}`}
-        onClick={() => setValue(value)}
+        onClick={() => setValue(false)}
       >
         {off}
       </button>
       <button
         type="button"
         className={`pwui-switch-button ${onActive}`}
-        onClick={() => setValue(value)}
+        onClick={() => setValue(true)}
       >
         {on}
       </button>

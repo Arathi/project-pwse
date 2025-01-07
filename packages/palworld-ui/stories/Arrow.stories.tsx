@@ -5,11 +5,20 @@ import Arrow from "../src/Arrow";
 const meta = {
   title: "Arrow",
   component: Arrow,
+  argTypes: {
+    color: { control: "color" },
+    placement: {
+      control: { type: "select" },
+      options: ["up", "right", "down", "left"],
+    },
+  },
 } satisfies Meta<typeof Arrow>;
 
 export default meta;
 
 const Template = (args: any) => <Arrow {...args} />;
+
+export const Default = Template.bind({});
 
 export const Up = Template.bind({});
 Up.args = {

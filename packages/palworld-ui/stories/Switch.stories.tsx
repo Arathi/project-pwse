@@ -6,6 +6,23 @@ import Switch from "../src/Switch";
 const meta = {
   title: "Switch",
   component: Switch,
+  argTypes: {
+    className: {
+      control: "text",
+    },
+    value: {
+      control: "boolean",
+    },
+    off: {
+      control: "text",
+    },
+    on: {
+      control: "text",
+    },
+    defaultValue: {
+      control: "boolean",
+    },
+  },
 } satisfies Meta<typeof Switch>;
 
 export default meta;

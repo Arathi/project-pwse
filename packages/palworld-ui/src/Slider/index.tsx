@@ -46,9 +46,9 @@ function Slider({
   }, [value]);
 
   return (
-    <div className={`pwse-slider ${className}`}>
-      <div className="pwse-slider-value">{valueFormatted}</div>
-      <div className="pwse-slider-range">
+    <div className={`pwui-slider ${className}`}>
+      <div className="pwui-slider-value">{valueFormatted}</div>
+      <div className="pwui-slider-range">
         <input
           type="range"
           value={value}

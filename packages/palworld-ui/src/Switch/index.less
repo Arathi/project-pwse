@@ -1,10 +1,17 @@
 @import "../flex.less";
 
 .pwui-switch {
+  --pwui-switch-height: 36px;
+  --pwui-switch-color-active-border: blue;
+  --pwui-switch-color-inactive: gray;
+  --pwui-switch-color-inactive-hover: rgba(255, 255, 255, 0.125);
+  --pwui-switch-color-active-body: rgba(0, 0, 255, 0.5);
+  --pwui-switch-color-active-text: white;
+
   .flex-row(start, center, 4px);
 
   padding-left: 48px;
-  height: 36px;
+  height: var(--pwui-switch-height);
 
   &-button {
     appearance: none;
@@ -19,15 +26,20 @@
 
     border-bottom-style: solid;
     border-bottom-width: 2px;
-    border-bottom-color: gray;
+    border-bottom-color: var(--pwui-switch-color-inactive);
 
-    color: white;
+    color: var(--pwui-switch-color-inactive);
     font-size: 1em;
     font-weight: bold;
 
+    &:hover {
+      background-color: var(--pwui-switch-color-inactive-hover);
+    }
+
     &.active {
-      background-color: rgba(0, 0, 255, 0.5);
-      border-bottom-color: blue;
+      background-color: var(--pwui-switch-color-active-body);
+      border-bottom-color: var(--pwui-switch-color-active-border);
+      color: var(--pwui-switch-color-active-text);
     }
   }
 }

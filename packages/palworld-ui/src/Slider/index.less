@@ -1,15 +1,21 @@
 @import "../flex.less";
 
-.pwse-slider {
+.pwui-slider {
+  --pwui-slider-thumb-size: 16px;
+  --pwui-slider-thumb-color: gray;
+  --pwui-slider-thumb-border-color: white;
+  --pwui-slider-thumb-border-color-hover: blue;
+  --pwui-slider-track-height: 4px;
+
   .flex-row(start, center, 0px);
 
-  .pwse-slider-value {
+  &-value {
     .flex-row(start, center, 0px);
     width: 48px;
     color: white;
   }
 
-  .pwse-slider-range {
+  &-range {
     .flex-column(center, unset, 0px);
     flex: 1;
 
@@ -17,8 +23,8 @@
       appearance: none;
       -webkit-appearance: none;
 
-      height: 4px;
-      background-color: gray;
+      height: var(--pwui-slider-track-height);
+      background-color: var(--pwui-slider-thumb-color);
       background-image: linear-gradient(
         to bottom,
         white,
