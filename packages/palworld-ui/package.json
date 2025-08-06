@@ -1,6 +1,6 @@
 {
   "name": "@pwse/palworld-ui",
-  "version": "0.25.104",
+  "version": "0.2508.6",
   "type": "module",
   "exports": {
     ".": {
@@ -19,37 +19,37 @@
     "check": "biome check --write",
     "dev": "rslib build --watch",
     "format": "biome format --write",
-    "storybook": "storybook dev",
+    "storybook": "storybook dev -p 6006",
     "test": "vitest run"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.3",
-    "@rsbuild/core": "~1.1.13",
-    "@rsbuild/plugin-less": "^1.1.0",
-    "@rsbuild/plugin-react": "^1.1.0",
-    "@rsbuild/plugin-svgr": "^1.0.6",
-    "@rslib/core": "^0.2.2",
-    "@storybook/addon-essentials": "^8.4.7",
-    "@storybook/addon-interactions": "^8.4.7",
-    "@storybook/addon-links": "^8.4.7",
-    "@storybook/addon-onboarding": "^8.4.7",
-    "@storybook/blocks": "^8.4.7",
-    "@storybook/react": "^8.4.7",
-    "@storybook/test": "^8.4.7",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.1.0",
-    "@types/react": "^19.0.2",
+    "@rsbuild/core": "catalog:rspack",
+    "@rsbuild/plugin-less": "catalog:rspack",
+    "@rsbuild/plugin-react": "catalog:rspack",
+    "@rsbuild/plugin-svgr": "catalog:rspack",
+    "@rslib/core": "catalog:rspack",
+    "@storybook/addon-essentials": "catalog:storybook",
+    "@storybook/addon-interactions": "catalog:storybook",
+    "@storybook/addon-links": "catalog:storybook",
+    "@storybook/addon-onboarding": "catalog:storybook",
+    "@storybook/blocks": "catalog:storybook",
+    "@storybook/react": "catalog:storybook",
+    "@storybook/test": "catalog:storybook",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "catalog:react",
+    "@types/react-dom": "catalog:react",
     "jsdom": "^25.0.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "storybook": "^8.4.7",
-    "storybook-addon-rslib": "^0.1.6",
-    "storybook-react-rsbuild": "^0.1.6",
-    "typescript": "^5.7.2",
-    "vitest": "^2.1.8"
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
+    "storybook": "catalog:storybook",
+    "storybook-addon-rslib": "catalog:storybook",
+    "storybook-react-rsbuild": "catalog:storybook",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   },
   "peerDependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "catalog:react",
+    "react-dom": "catalog:react"
   }
 }

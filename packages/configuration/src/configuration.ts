@@ -1,9 +1,6 @@
 import { DefaultPalWorldSettings, KnownEnums } from "./common";
-import {
-  type Parameter,
-  parse as parseParameter,
-  formatValue,
-} from "./parameter";
+import type { Parameter } from "./parameter";
+import { formatValue, parse as parseParameter } from "./parameter";
 
 export const Metadata = parse(DefaultPalWorldSettings);
 
@@ -12,7 +9,7 @@ export type Configuration = Record<string, Parameter>;
 export function parse(
   content: string = DefaultPalWorldSettings,
   metadata: Configuration = {},
-  enums: Record<string, string[]> = KnownEnums
+  enums: Record<string, string[]> = KnownEnums,
 ): Configuration {
   console.info(`正在解析配置文件：\n${content}`);
   const lines = content.split("\n").map((line) => line.trim());
@@ -41,13 +38,13 @@ export function parse(
 export function toJSON(
   config: Configuration,
   outputDefault: boolean = false,
-  metadata: Configuration = Metadata
+  metadata: Configuration = Metadata,
 ): Record<string, string> {
-  let result: Record<string, string> = {};
+  const result: Record<string, string> = {};
   for (const name in metadata) {
     const { type, value: defaultValue } = metadata[name];
     const configParameter = config[name];
-    let parameter = {
+    const parameter = {
       name,
       type,
       value: configParameter?.value ?? defaultValue,
@@ -62,7 +59,7 @@ export function toJSON(
 export function stringify(
   config: Configuration,
   outputDefault: boolean = false,
-  metadata: Configuration = Metadata
+  metadata: Configuration = Metadata,
 ): string {
   const parameters: string[] = [];
   const json = toJSON(config, outputDefault, metadata);
