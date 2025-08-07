@@ -1,8 +1,5 @@
-import { describe, expect, test } from "vitest";
-import ini from "ini";
-
-import { ParamPattern } from "../src/configuration-file";
-import { Parameter, ParameterType } from "../src";
+import { describe, test } from "vitest";
+import { ConfigurationFile } from "../src/configuration-file";
 
 const content = `
 ; This configuration file is a sample of the default server settings.
@@ -16,93 +13,10 @@ const REGEX_KEY = /([A-Za-z][0-9A-Za-z_]+)=/;
 const REGEX_PARAM =
   /([A-Za-z][0-9A-Za-z_]+)=(\((.*)\)|([A-Za-z][0-9A-Za-z_]+)|"(.*?)"|(\d+(\.\d+)?))/;
 
-function parse(content: string) {
-  const lines = content.split("\n");
-
-  for (let line of lines) {
-    line = line.trim();
-
-    if (line.startsWith(";")) {
-      continue;
-    }
-
-    const matches = REGEX_KEY.exec(line);
-    if (matches === null) {
-      continue;
-    }
-
-    const key = matches[1];
-    // console.info("key = ", key);
-    parsePair(line);
-  }
-}
-
-// function parseParameter(remains: string): Parameter | null {
-//   let index = 0;
-//   // let key: string | undefined;
-//   const param: Parameter = {
-//     type: ParameterType.Unknown,
-//     name: "",
-//     value: 0,
-//   };
-//   do {
-//     const matches = REGEX_KEY.exec(remains);
-//     if (matches === null) {
-//       // 找不到 key=
-//       return null;
-//     }
-//     param.name = matches[1];
-//
-//   } while (index >= remains.length);
-//   return param;
-// }
-
-function parsePair(input: string) {
-  const matches = REGEX_PARAM.exec(input);
-  if (matches === null) {
-    return;
-  }
-
-  const [full, key, value, group, enums, text, decimal] = matches;
-  // console.info("full = ", full);
-  // console.info("key = ", key);
-  // console.info("value = ", value);
-  // console.info("group = ", group);
-  // console.info("enum = ", group);
-
-  if (group !== undefined) {
-    parseGroup(group);
-  }
-}
-
-function parseGroup(input: string) {
-  let remains = input;
-  while (true) {
-    const matches = REGEX_PARAM.exec(remains);
-    if (matches === null) {
-      break;
-    }
-
-    const [full, key, value, group, enums, text, decimal] = matches;
-    if (group !== undefined) {
-      console.info(`${key}: Array = [${group}]`);
-    } else if (enums !== undefined) {
-      console.info(`${key}: Enum = ${enums}`);
-    } else if (text !== undefined) {
-      console.info(`${key}: Text = "${text}"`);
-    } else if (decimal !== undefined) {
-      console.info(`${key}: Decimal = ${decimal}`);
-    }
-
-    remains = remains.substring(matches.index + full.length);
-    // console.info("remains =", remains);
-  }
-}
-
 describe("配置文件测试", () => {
   test("反序列化测试", () => {
-    // console.info("正则表达式：", ParamPattern);
-    // const key = new RegExp();
-    parse(content);
+    // parse(content);
+    const config = new ConfigurationFile();
+    config.parse(content);
   });
 });

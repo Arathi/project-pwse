@@ -128,26 +128,19 @@ importers:
         version: 5.9.2
 
   packages/configuration:
-    dependencies:
-      '@structium/ini':
-        specifier: ^0.0.4
-        version: 0.0.4
-      ini:
-        specifier: ^5.0.0
-        version: 5.0.0
-      structium:
-        specifier: ^0.0.4
-        version: 0.0.4
     devDependencies:
       '@rslib/core':
         specifier: catalog:rspack
         version: 0.11.2(typescript@5.9.2)
-      '@types/ini':
-        specifier: ^4.1.1
-        version: 4.1.1
       '@types/node':
         specifier: 'catalog:'
         version: 22.17.0
+      antlr-ng:
+        specifier: ^1.0.9
+        version: 1.0.9
+      antlr4ng:
+        specifier: ^3.0.16
+        version: 3.0.16
       typescript:
         specifier: 'catalog:'
         version: 5.9.2
@@ -431,19 +424,6 @@ packages:
     engines: {node: '>=14.21.3'}
     cpu: [x64]
     os: [win32]
-
-  '@clippium/color@1.0.1':
-    resolution: {integrity: sha512-5UkFted+1uSUZhb26aRXGpIwgrLxVkIvlmEOG9f0VYj1PM3SwM+sRtMuzIH7vm0837ntvRaybDlutuwF8ov7HQ==}
-
-  '@clippium/preset-colored@1.0.1':
-    resolution: {integrity: sha512-UxXSPOwin40Ght5Zxlx3a9dQeX1FpaCsSP7gfGHwEzACILv16H6lvqCkMaG+BiE2BQqne659jzo5gIRFW2aJfQ==}
-    peerDependencies:
-      clippium: 1.0.1
-
-  '@clippium/preset-config@1.0.1':
-    resolution: {integrity: sha512-lO/yT0HBgAkSaY53AWg5mhPBgDDF/6a4tJ1gWgZyTRZk6LTJN7xUNRLPu8O20lgGp+29j4NG+Uswqbmbs2UG/Q==}
-    peerDependencies:
-      clippium: 1.0.1
 
   '@csstools/color-helpers@5.0.2':
     resolution: {integrity: sha512-JqWH1vsgdGcw2RR6VliXXdA0/59LttzlU8UlRT/iUUsEeWfYq8I+K0yhihEUTTHLRm1EXvpsCx3083EU15ecsA==}
@@ -1136,66 +1116,6 @@ packages:
     peerDependencies:
       storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
-  '@structium/aio@0.0.4':
-    resolution: {integrity: sha512-4EgQfysBAxPg5Tgu6nSzMcKwa15ryoFnWBC4UnDfpTwnmD27JqPuDGgANiGdHcIwmU24bXE0v1zFse7OS0td5w==}
-
-  '@structium/asn1@0.0.4':
-    resolution: {integrity: sha512-5UrKNuP/3U07IMrdVzCeQAx0zz+/SrI8Owpo2vpZeK39wGHGTpOHnXps41v4TfoQpNy26kS7iQ33iEqgsl/lJQ==}
-
-  '@structium/cson@0.0.4':
-    resolution: {integrity: sha512-V3uI1d7l+NhlHhR6dryg22NLhj5HWyfGYkdsbq8Le5VolPCTkNTRH3jGkR3a9wCTp1wmjMJUs8U9/UOuELs1nw==}
-
-  '@structium/css@0.0.4':
-    resolution: {integrity: sha512-UUS1u0SPwjcmNLd7TG7gLf4IX1n1ObigRPk7QQDZxxAiZ3f2wcb7e9c1AKbXidVLnm/ayiTIm/40r0HsNsUAQQ==}
-
-  '@structium/csv@0.0.4':
-    resolution: {integrity: sha512-2au0Qt5+iUsRxAfqpGg9oFZvJF6SXo8TlEqNUrsgefXlM8FN5dS3/FB4BuhuRd8KkfIxViQDpcn7QLAKvlR9cg==}
-
-  '@structium/env@0.0.4':
-    resolution: {integrity: sha512-EPBq2gWcq+yr0mS0BHV7lTfYZ3AhY6TCDPrqe+iOIAOniMcEgDrmYUtsZRVs3+tbOZ1B6EgWNh2dNKq/yyJa/w==}
-
-  '@structium/graphql@0.0.4':
-    resolution: {integrity: sha512-wpR8nP0kbMVAFqNc94EfXzccxE4rDoPYpM4e9Ox1XSQi+wqRMfBeKmn9KjdQhb0dpVcT4ZUuS1z7QxGmzuktdQ==}
-
-  '@structium/html-markdown@0.0.4':
-    resolution: {integrity: sha512-iwVGBahQl53p+KQ3nI5KfHOXu5bc3qkbR+EJGuGyUT26RVP7GbePutZfExfpe4UJ0/Wp5PmZSF4Nys3LSY1jtQ==}
-
-  '@structium/ini@0.0.4':
-    resolution: {integrity: sha512-ldGC7KZIzfrBfYzNgE6+KzMmXXiKbZuNwhm5jMkGxf6W+N5QKAGEXO/Ri9m1933rTPGX2RNsZlgnAT//hZ8i9A==}
-
-  '@structium/javascript@0.0.4':
-    resolution: {integrity: sha512-nSEwms+DMBMimquDJZWTAnrHEghE0yir7jikKCwgoB7NRrnOf9JFTVTZ9opnUi1FbOfgrG95OzjaRT5e5ORsEw==}
-
-  '@structium/json@0.0.4':
-    resolution: {integrity: sha512-E0oBZ/9WXZTwyw/AVUi+z9ra14+JC1v7mRgnMUHqlMygXV7FAtaGyiMvAdwj/SofKqf+vdP39N+bWB5EnfUylg==}
-
-  '@structium/jsonld@0.0.4':
-    resolution: {integrity: sha512-6lTdvxsDrXWanNZubFS1zTc9btyhLnCM5FHvOwZVAGOPkuDzqV70ECI1peo49WIny5E6guuy4tptYrozdkV0tA==}
-
-  '@structium/lua@0.0.4':
-    resolution: {integrity: sha512-5NxPuOY7t2X/ISNJ3Cfmptt7HlrkP2mEp0Y2OGppXwt46yY7VQQ2g5TdtVcqg2i7SfdgCnvrVc8edqY047Rl6Q==}
-
-  '@structium/plist@0.0.4':
-    resolution: {integrity: sha512-4yehYRLaX4RurKPFs82jU0/sABjhVJV2YTabVAgVzGOvZXTSHp37qbwXlu52FHcXie12cZ2qIcFtKUspQjHxUg==}
-
-  '@structium/sql@0.0.4':
-    resolution: {integrity: sha512-09hVSc8fNzc6Kezvy74EoZrVNqh89IWoklOmSQKT2GeqECfp524PsijaIap1Xu7iht9HEEqsgAyeezYnClcupA==}
-
-  '@structium/svg@0.0.4':
-    resolution: {integrity: sha512-HDUM8JNfyvkqE+Cd4odEbIZgpee5hxUZWZJ+oHrYBocdMbTp/n5n2spTTw82QM897MQITN/Aoat7iPmqUUFERA==}
-
-  '@structium/toml@0.0.4':
-    resolution: {integrity: sha512-ViluFvnXG+gyebnc5f6FeujoRh5kEJjF8lluX3DDXyxekbFpyTvmsXpWZ05YoOLJdkW9SeMhsJYf6LfduNCDVg==}
-
-  '@structium/typescript@0.0.4':
-    resolution: {integrity: sha512-j6SPstS2BgMek+r6n9MJCt69H3X4+0LEIIpL+wjwQ2huVkGCAij9JWsRtLCaYyOmLIky0EfEysSMv7xiNtIU4Q==}
-
-  '@structium/xml@0.0.4':
-    resolution: {integrity: sha512-0Mh28WGhnsteKdVjQ8dCNZeFzaaMX5fXzQj7vzMzMY0p1qIOVAW7iiOrKpAJtIMQ9EV9SN0jld/SFa55ZDvmQw==}
-
-  '@structium/yaml@0.0.4':
-    resolution: {integrity: sha512-U7nH1a3rIf2hB1Z0GHxIFW7hXyvxu0nNaZCjfEsVPB9hHcz7i6dTvxHyavuEiGOksbp37OfY+XAtZs+g23H0ug==}
-
   '@svgr/babel-plugin-add-jsx-attribute@8.0.0':
     resolution: {integrity: sha512-b9MIk7yhdS1pMCZM8VeNfUlSKVRhsHZNMl5O9SfaX0l0t5wjdgu4IDzGB8bpnGBBOjGST3rRFVsaaEtI4W6f7g==}
     engines: {node: '>=14'}
@@ -1348,9 +1268,6 @@ packages:
 
   '@types/html-minifier-terser@7.0.2':
     resolution: {integrity: sha512-mm2HqV22l8lFQh4r2oSsOEVea+m0qqxEmwpc9kC1p/XzmjLWrReR9D/GRs8Pex2NX/imyEH9c5IU/7tMBQCHOA==}
-
-  '@types/ini@4.1.1':
-    resolution: {integrity: sha512-MIyNUZipBTbyUNnhvuXJTY7B6qNI78meck9Jbv3wk0OgNwRyOOVEKDutAkOs1snB/tx0FafyR6/SN4Ps0hZPeg==}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -1522,6 +1439,16 @@ packages:
     resolution: {integrity: sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==}
     engines: {node: '>=10'}
 
+  antlr-ng@1.0.9:
+    resolution: {integrity: sha512-SOyRSF7/qL8REv9+x27T1qTMyOBIA2DW3CX8Xl/eWA9FCtrCHz7zNtcY51GaAiErA42gm7Ui6TQrE4eaBtTWBA==}
+    hasBin: true
+
+  antlr4ng@3.0.15:
+    resolution: {integrity: sha512-VELFqTfcpGI2bj6ScMWuxM3FI6HOsojrgmnw3cCbUtsQ1DNOq32wJsjOt7vLvfIniyyuE1DIYegGcuFmn+jgyw==}
+
+  antlr4ng@3.0.16:
+    resolution: {integrity: sha512-DQuJkC7kX3xunfF4K2KsWTSvoxxslv+FQp/WHQZTJSsH2Ec3QfFmrxC3Nky2ok9yglXn6nHM4zUaVDxcN5f6kA==}
+
   anymatch@3.1.3:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
     engines: {node: '>= 8'}
@@ -1553,6 +1480,9 @@ packages:
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
+
+  base64-js@1.5.1:
+    resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
   better-opn@3.0.2:
     resolution: {integrity: sha512-aVNobHnJqLiUelTaHat9DZ1qM2w0C0Eym4LPI/3JxOnSokGVdsl1T1kN7TFvsEAD8G47A6VKQ0TVHqbBnYMJlQ==}
@@ -1632,10 +1562,6 @@ packages:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
 
-  chalk@5.4.1:
-    resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
-    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
-
   check-error@2.1.1:
     resolution: {integrity: sha512-OAlb+T7V4Op9OwdkjmguYRqncdlx5JiofwOAUkmTF+jNdHwzTaTs4sRAGpzLF3oOz5xAyDGrPgeIDFQmDOTiJw==}
     engines: {node: '>= 16'}
@@ -1655,9 +1581,6 @@ packages:
     resolution: {integrity: sha512-D5J+kHaVb/wKSFcyyV75uCn8fiY4sV38XJoe4CUyGQ+mOU/fMVYUdH1hJC+CJQ5uY3EnW27SbJYS4X8BiLrAFg==}
     engines: {node: '>= 10.0'}
 
-  clippium@1.0.1:
-    resolution: {integrity: sha512-6XxvJ6ahAAsiXsUn5B8f9JLWtGqWskcHbiKx5Rv2s9Qf3KRKjSnM/0DsgLx/FKbQnwZ8A8FI9Rqd+Y6i0adA1w==}
-
   color-convert@2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
     engines: {node: '>=7.0.0'}
@@ -1672,6 +1595,10 @@ packages:
   commander@10.0.1:
     resolution: {integrity: sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==}
     engines: {node: '>=14'}
+
+  commander@13.1.0:
+    resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
+    engines: {node: '>=18'}
 
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
@@ -1915,6 +1842,10 @@ packages:
   fast-json-parse@1.0.3:
     resolution: {integrity: sha512-FRWsaZRWEJ1ESVNbDWmsAlqDk96gPQezzLghafp5J4GUKjbCz3OkAHuZs5TuPEtkbVQERysLp9xv6c24fBm8Aw==}
 
+  fast-printf@1.6.10:
+    resolution: {integrity: sha512-GwTgG9O4FVIdShhbVF3JxOgSBY2+ePGsu2V/UONgoCPzF9VY6ZdBMKsHKCYQHZwNk3qNouUolRDsgVxcVA5G1w==}
+    engines: {node: '>=10.0'}
+
   fast-uri@3.0.6:
     resolution: {integrity: sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==}
 
@@ -2029,6 +1960,10 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
+  he@1.2.0:
+    resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
+    hasBin: true
+
   html-encoding-sniffer@4.0.0:
     resolution: {integrity: sha512-Y22oTqIU4uuPgEemfz7NDJz6OeKf12Lsu+QC+s3BVpda64lTiMYCyGwg5ki4vFxkMwQdeZDl2adZoqUgdFuTgQ==}
     engines: {node: '>=18'}
@@ -2071,10 +2006,6 @@ packages:
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
-
-  ini@5.0.0:
-    resolution: {integrity: sha512-+N0ngpO3e7cRUWOJAS7qw0IZIVc6XPrW4MlFBdD066F2L4k1L6ker3hLqSq7iXxU5tgS4WGkIUElWn5vogAEnw==}
-    engines: {node: ^18.17.0 || >=20.5.0}
 
   is-arguments@1.2.0:
     resolution: {integrity: sha512-7bVbi0huj/wrIAOzb8U1aszg9kdi3KN/CyU19CTI7tAoZYEZoL9yCDXpbXN+uPsuWnP02cyug1gleqq+TU+YCA==}
@@ -2225,6 +2156,10 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
+  luxon@3.5.0:
+    resolution: {integrity: sha512-rh+Zjr6DNfUYR3bPwJEnuwDdqMbxZW7LOQfUN4B54+Cl+0o5zaU9RJ6bcidfDtC1cWCZXQ+nvX8bf6bAji37QQ==}
+    engines: {node: '>=12'}
+
   lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
     hasBin: true
@@ -2360,6 +2295,9 @@ packages:
   p-try@2.2.0:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
     engines: {node: '>=6'}
+
+  pako@0.2.9:
+    resolution: {integrity: sha512-NUcwaKxUxWrZLpDG+z/xZaCgQITkA/Dv4V/T6bw7VON6l1Xz/VnrBqrYjZQ12TamKHzITTfOEIYUj48y2KXImA==}
 
   param-case@3.0.4:
     resolution: {integrity: sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A==}
@@ -2627,10 +2565,6 @@ packages:
     resolution: {integrity: sha512-94Bdh3cC2PKrbgSOUqTiGPWVZeSiXfKOVZNJniWoqrWrRkB1CJzBU3NEbiTsPcYy1lDsANA/THzS+9WBiy5nfQ==}
     engines: {node: '>= 10'}
 
-  smol-toml@1.4.1:
-    resolution: {integrity: sha512-CxdwHXyYTONGHThDbq5XdwbFsuY4wlClRGejfE2NtwUtiHYsP1QtNsHb/hnj31jKYSchztJsaA8pSQoVzkfCFg==}
-    engines: {node: '>= 18'}
-
   snake-case@3.0.4:
     resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
 
@@ -2700,6 +2634,9 @@ packages:
       prettier:
         optional: true
 
+  stringtemplate4ts@1.0.9:
+    resolution: {integrity: sha512-KYZm2bJlSjynG5Y+L46fkaKBQG6mhV6hb2RBA8dpx3/Vj6G4u7gwXNKYvaN9+QD5sj68/1srtSNDvqEso7MwsQ==}
+
   strip-bom@3.0.0:
     resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
     engines: {node: '>=4'}
@@ -2714,9 +2651,6 @@ packages:
 
   strip-literal@3.0.0:
     resolution: {integrity: sha512-TcccoMhJOM3OebGhSBEmp3UZ2SfDMZUEBdRA/9ynfLi8yYajyWX3JiXArcJt4Umh4vISpspkQIY8ZZoCqjbviA==}
-
-  structium@0.0.4:
-    resolution: {integrity: sha512-IOUDNA1GSQl/ebXd1kwr7tXHMPSHxOcmj0/Bw0/vtlMk2b/Si+4WwfE9hh8Jr/j7E9F80+/v+9jbVGrQQm5GAg==}
 
   supports-color@7.2.0:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
@@ -2771,6 +2705,9 @@ packages:
     engines: {node: '>=10.18'}
     peerDependencies:
       tslib: ^2
+
+  tiny-inflate@1.0.3:
+    resolution: {integrity: sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw==}
 
   tiny-invariant@1.3.3:
     resolution: {integrity: sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg==}
@@ -2868,6 +2805,12 @@ packages:
 
   undici-types@7.10.0:
     resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
+
+  unicode-properties@1.4.1:
+    resolution: {integrity: sha512-CLjCCLQ6UuMxWnbIylkisbRj31qxHPAurvena/0iwSVbQ2G1VY5/HjV0IRabOEbDHlzZlRdCrD4NhB0JtU40Pg==}
+
+  unicode-trie@2.0.0:
+    resolution: {integrity: sha512-x7bc76x0bm4prf1VLg79uhAzKw8DVboClSN5VxJuQ+LKDOVEW9CdH+VY7SP+vX7xCYQqzzgQpFqz15zeLvAtZQ==}
 
   universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
@@ -3245,20 +3188,6 @@ snapshots:
 
   '@biomejs/cli-win32-x64@2.1.3':
     optional: true
-
-  '@clippium/color@1.0.1':
-    dependencies:
-      chalk: 5.4.1
-
-  '@clippium/preset-colored@1.0.1(clippium@1.0.1)':
-    dependencies:
-      clippium: 1.0.1
-
-  '@clippium/preset-config@1.0.1(clippium@1.0.1)':
-    dependencies:
-      clippium: 1.0.1
-      js-yaml: 4.1.0
-      smol-toml: 1.4.1
 
   '@csstools/color-helpers@5.0.2': {}
 
@@ -3873,66 +3802,6 @@ snapshots:
     dependencies:
       storybook: 8.6.14
 
-  '@structium/aio@0.0.4':
-    dependencies:
-      '@structium/asn1': 0.0.4
-      '@structium/cson': 0.0.4
-      '@structium/css': 0.0.4
-      '@structium/csv': 0.0.4
-      '@structium/env': 0.0.4
-      '@structium/graphql': 0.0.4
-      '@structium/html-markdown': 0.0.4
-      '@structium/ini': 0.0.4
-      '@structium/javascript': 0.0.4
-      '@structium/json': 0.0.4
-      '@structium/jsonld': 0.0.4
-      '@structium/lua': 0.0.4
-      '@structium/plist': 0.0.4
-      '@structium/sql': 0.0.4
-      '@structium/svg': 0.0.4
-      '@structium/toml': 0.0.4
-      '@structium/typescript': 0.0.4
-      '@structium/xml': 0.0.4
-      '@structium/yaml': 0.0.4
-
-  '@structium/asn1@0.0.4': {}
-
-  '@structium/cson@0.0.4': {}
-
-  '@structium/css@0.0.4': {}
-
-  '@structium/csv@0.0.4': {}
-
-  '@structium/env@0.0.4': {}
-
-  '@structium/graphql@0.0.4': {}
-
-  '@structium/html-markdown@0.0.4': {}
-
-  '@structium/ini@0.0.4': {}
-
-  '@structium/javascript@0.0.4': {}
-
-  '@structium/json@0.0.4': {}
-
-  '@structium/jsonld@0.0.4': {}
-
-  '@structium/lua@0.0.4': {}
-
-  '@structium/plist@0.0.4': {}
-
-  '@structium/sql@0.0.4': {}
-
-  '@structium/svg@0.0.4': {}
-
-  '@structium/toml@0.0.4': {}
-
-  '@structium/typescript@0.0.4': {}
-
-  '@structium/xml@0.0.4': {}
-
-  '@structium/yaml@0.0.4': {}
-
   '@svgr/babel-plugin-add-jsx-attribute@8.0.0(@babel/core@7.28.0)':
     dependencies:
       '@babel/core': 7.28.0
@@ -4112,8 +3981,6 @@ snapshots:
   '@types/estree@1.0.8': {}
 
   '@types/html-minifier-terser@7.0.2': {}
-
-  '@types/ini@4.1.1': {}
 
   '@types/json-schema@7.0.15': {}
 
@@ -4337,6 +4204,17 @@ snapshots:
 
   ansi-styles@5.2.0: {}
 
+  antlr-ng@1.0.9:
+    dependencies:
+      antlr4ng: 3.0.16
+      commander: 13.1.0
+      stringtemplate4ts: 1.0.9
+      unicode-properties: 1.4.1
+
+  antlr4ng@3.0.15: {}
+
+  antlr4ng@3.0.16: {}
+
   anymatch@3.1.3:
     dependencies:
       normalize-path: 3.0.0
@@ -4363,6 +4241,8 @@ snapshots:
       possible-typed-array-names: 1.1.0
 
   balanced-match@1.0.2: {}
+
+  base64-js@1.5.1: {}
 
   better-opn@3.0.2:
     dependencies:
@@ -4446,8 +4326,6 @@ snapshots:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
 
-  chalk@5.4.1: {}
-
   check-error@2.1.1: {}
 
   chokidar@3.6.0:
@@ -4470,8 +4348,6 @@ snapshots:
     dependencies:
       source-map: 0.6.1
 
-  clippium@1.0.1: {}
-
   color-convert@2.0.1:
     dependencies:
       color-name: 1.1.4
@@ -4483,6 +4359,8 @@ snapshots:
       delayed-stream: 1.0.0
 
   commander@10.0.1: {}
+
+  commander@13.1.0: {}
 
   commander@2.20.3: {}
 
@@ -4721,6 +4599,8 @@ snapshots:
 
   fast-json-parse@1.0.3: {}
 
+  fast-printf@1.6.10: {}
+
   fast-uri@3.0.6: {}
 
   fdir@6.4.6(picomatch@4.0.3):
@@ -4845,6 +4725,8 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
+  he@1.2.0: {}
+
   html-encoding-sniffer@4.0.0:
     dependencies:
       whatwg-encoding: 3.1.1
@@ -4894,8 +4776,6 @@ snapshots:
       wrappy: 1.0.2
 
   inherits@2.0.4: {}
-
-  ini@5.0.0: {}
 
   is-arguments@1.2.0:
     dependencies:
@@ -5046,6 +4926,8 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
+  luxon@3.5.0: {}
+
   lz-string@1.5.0: {}
 
   magic-string@0.30.17:
@@ -5164,6 +5046,8 @@ snapshots:
       p-limit: 4.0.0
 
   p-try@2.2.0: {}
+
+  pako@0.2.9: {}
 
   param-case@3.0.4:
     dependencies:
@@ -5451,8 +5335,6 @@ snapshots:
       mrmime: 2.0.1
       totalist: 3.0.1
 
-  smol-toml@1.4.1: {}
-
   snake-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
@@ -5547,6 +5429,13 @@ snapshots:
       - supports-color
       - utf-8-validate
 
+  stringtemplate4ts@1.0.9:
+    dependencies:
+      antlr4ng: 3.0.15
+      fast-printf: 1.6.10
+      he: 1.2.0
+      luxon: 3.5.0
+
   strip-bom@3.0.0: {}
 
   strip-indent@3.0.0:
@@ -5560,14 +5449,6 @@ snapshots:
   strip-literal@3.0.0:
     dependencies:
       js-tokens: 9.0.1
-
-  structium@0.0.4:
-    dependencies:
-      '@clippium/color': 1.0.1
-      '@clippium/preset-colored': 1.0.1(clippium@1.0.1)
-      '@clippium/preset-config': 1.0.1(clippium@1.0.1)
-      '@structium/aio': 0.0.4
-      clippium: 1.0.1
 
   supports-color@7.2.0:
     dependencies:
@@ -5616,6 +5497,8 @@ snapshots:
   thingies@1.21.0(tslib@2.8.1):
     dependencies:
       tslib: 2.8.1
+
+  tiny-inflate@1.0.3: {}
 
   tiny-invariant@1.3.3: {}
 
@@ -5692,6 +5575,16 @@ snapshots:
   undici-types@6.21.0: {}
 
   undici-types@7.10.0: {}
+
+  unicode-properties@1.4.1:
+    dependencies:
+      base64-js: 1.5.1
+      unicode-trie: 2.0.0
+
+  unicode-trie@2.0.0:
+    dependencies:
+      pako: 0.2.9
+      tiny-inflate: 1.0.3
 
   universalify@2.0.1: {}
 

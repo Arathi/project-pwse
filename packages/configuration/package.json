@@ -20,18 +20,15 @@
     "check": "biome check --write",
     "dev": "rslib build --watch",
     "format": "biome format --write",
-    "test": "vitest run"
+    "test": "vitest run",
+    "generate": "antlr-ng -Dlanguage=TypeScript -l -v -o src/parser grammar/PalWorldSettings.g4"
   },
   "devDependencies": {
     "@rslib/core": "catalog:rspack",
-    "@types/ini": "^4.1.1",
     "@types/node": "catalog:",
+    "antlr-ng": "^1.0.9",
+    "antlr4ng": "^3.0.16",
     "typescript": "catalog:",
     "vitest": "catalog:"
-  },
-  "dependencies": {
-    "@structium/ini": "^0.0.4",
-    "ini": "^5.0.0",
-    "structium": "^0.0.4"
   }
 }

@@ -1,32 +1,27 @@
 grammar PalWorldSettings;
 
-settings: pair (EOL pair)* EOF;
+sections: section* EOF;
+section: sectionHeader sectionValues;
+sectionHeader: SECTION_HEADER;
+sectionValues: pair (NL pair)*;
 
-pair: key EQ value;
-
-literal: bool | enums | fixed | integer | string;
-array: PL literal (CM literal)* PR;
-object: PL pair (CM pair)* PR;
-value: literal | array | object;
-
+pair: key EQ (literal | list | map);
 key: IDENTIFIER;
-bool: TRUE | FALSE;
+literal: bool | enums | numeric | text;
+bool: BOOL;
 enums: IDENTIFIER;
-fixed: FIXED;
-integer: INTEGER;
-string: STRING;
+numeric: NUMBER;
+text: STRING;
+list: PL literal (CM literal)* PR;
+map: PL pair (CM pair)* PR;
 
-COMMENT: SC (~[\n])+ EOL -> skip;
-GROUP: BL .*? BR -> skip;
+COMMENT: SC (~[\n])* NL -> skip;
+SECTION_HEADER: BL (~[\n])+ BR;
 
-TRUE: 'True';
-FALSE: 'False';
-IDENTIFIER: [A-Za-z][0-9A-Za-z_]+;
-INTEGER: [0-9]+;
-FIXED: [0-9]+ DT [0-9]+;
+BOOL: 'True' | 'False';
+IDENTIFIER: [A-Za-z][0-9A-Za-z_]*;
+NUMBER: [0-9]+ (DT [0-9]+)?;
 STRING: QT (.)*? QT;
-
-DIGIT: [0-9];
 
 EQ: '=';
 CM: ',';
@@ -39,6 +34,5 @@ PR: ')';
 BL: '[';
 BR: ']';
 
-EOL: (CR? LF) -> skip;
-CR: '\r';
-LF: '\n';
+NL: ('\r'? '\n')+;
+WS: [ \t\r\n]+ -> skip;

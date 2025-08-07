@@ -1,40 +1,18 @@
-import { ParameterType } from ".";
-import type { Parameter } from "./parameter";
-
-export const KeyPattern = "([A-Za-z][0-9A-Za-z_]+)=";
-export const EnumPattern = "([A-Z][A-Za-z]+)";
-export const TextPattern = '"(.*?)"';
-export const NumberPattern = "(\d+(\.\d{6})?)";
-export const GroupPattern = "\((.*)\)";
-
-const ValuePatterns = [GroupPattern, EnumPattern, TextPattern, NumberPattern];
-
-export const ParamPattern = `${KeyPattern}=(${ValuePatterns.join("|")})`;
-export const ParamRegex = new RegExp(ParamPattern);
+import { CharStream, CommonTokenStream, ParseTreeWalker } from "antlr4ng";
+import { PalWorldSettingsParser as Parser } from "./parser/PalWorldSettingsParser";
+import { PalWorldSettingsLexer as Lexer } from "./parser/PalWorldSettingsLexer";
+import { Listener } from "./configuration-parser";
 
 export class ConfigurationFile {
-  parameters: Parameter[] = [];
+  parse(content: string) {
+    const inputStream = CharStream.fromString(content);
+    const lexer = new Lexer(inputStream);
+    const tokenStream = new CommonTokenStream(lexer);
+    const parser = new Parser(tokenStream);
+    const root = parser.sections();
 
-  stringify(): string {
-    return "";
+    const listener = new Listener();
+    const walker = new ParseTreeWalker();
+    walker.walk(listener, root);
   }
-
-  parse(content: string): Parameter[] {
-    const lines = content.split("\n");
-    const parameters: Parameter[] = [];
-    for (const line of lines) {
-      // const property = this.parseLine(line.trim());
-      // parameters.push(property);
-    }
-    return parameters;
-  }
-
-  // parseLine(line: string): Parameter {
-  //   return {
-  //     type: ParameterType.Boolean,
-  //     value: false,
-  //   };
-  // }
-
-  // parse
 }
