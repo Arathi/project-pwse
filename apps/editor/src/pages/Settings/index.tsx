@@ -1,6 +1,5 @@
-import { Configuration, Metadata } from "@pwse/configuration";
-import { Button, Slider, Switch, Select } from "@pwse/palworld-ui";
 import Editor from "@monaco-editor/react";
+import { Button, Slider, Switch, Select } from "@pwse/palworld-ui";
 
 import "./index.less";
 
@@ -19,11 +18,7 @@ const Settings = () => {
           ]}
         />
         <Switch />
-        <Editor
-          language="json"
-          theme="vs-dark"
-          value={JSON.stringify(Metadata, null, "  ")}
-        />
+        <Editor language="ini" theme="vs-dark" value={""} />
       </div>
     </>
   );
