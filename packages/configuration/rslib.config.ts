@@ -1,3 +1,4 @@
+import { resolve } from "node:path";
 import { defineConfig } from "@rslib/core";
 
 export default defineConfig({
@@ -14,5 +15,10 @@ export default defineConfig({
   ],
   source: {
     assetsInclude: [/\.ini$/],
+  },
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "src"),
+    },
   },
 });

@@ -1,6 +1,6 @@
 {
   "name": "@pwse/configuration",
-  "version": "0.25.104",
+  "version": "0.2508.8",
   "type": "module",
   "exports": {
     ".": {
@@ -21,7 +21,7 @@
     "dev": "rslib build --watch",
     "format": "biome format --write",
     "test": "vitest run",
-    "generate": "antlr-ng -Dlanguage=TypeScript -l -v -o src/parser grammar/PalWorldSettings.g4"
+    "generate": "antlr-ng -Dlanguage=TypeScript -l -o src/parser grammar/OptionSettings.g4"
   },
   "devDependencies": {
     "@rslib/core": "catalog:rspack",

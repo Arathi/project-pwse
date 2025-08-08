@@ -1,7 +1,8 @@
-export { type Parameter, Type as ParameterType } from "./parameter";
-import * as Parameters from "./parameter";
-
-export { type Configuration, Metadata } from "./configuration";
-import * as Configurations from "./configuration";
-
-export { Parameters, Configurations };
+export type { OptionSettings } from "./option-settings";
+export { Parser } from "./option-settings/parser";
+export type {
+  Property,
+  ValueType,
+  ValueTypes,
+} from "./option-settings/property";
+export { PropertyType } from "./option-settings/property";
